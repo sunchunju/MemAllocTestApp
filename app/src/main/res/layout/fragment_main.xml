@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.MainFragment">
+
+    <TextView
+        android:id="@+id/totalMemTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="总内存："
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingStart="10dp"
+        android:paddingTop="30dp"/>
+
+    <TextView
+        android:id="@+id/avaMemTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="当前可用内存："
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/totalMemTv"
+        android:paddingStart="10dp"
+        android:paddingTop="10dp"/>
+
+    <TextView
+        android:id="@+id/maxMemTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="请设置最大分配内存大小(MB)："
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/avaMemTv"
+        android:paddingStart="10dp"
+        android:paddingTop="10dp"/>
+
+    <EditText
+        android:id="@+id/maxMemEd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="1024"
+        app:layout_constraintStart_toEndOf="@+id/maxMemTv"
+        app:layout_constraintTop_toBottomOf="@+id/avaMemTv"
+        android:paddingStart="10dp"
+        android:paddingTop="10dp"/>
+
+    <TextView
+        android:id="@+id/alloMemPerTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="请设置单次分配内存大小(MB)："
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/maxMemTv"
+        android:paddingStart="10dp"
+        android:paddingTop="10dp"/>
+
+    <EditText
+        android:id="@+id/allocMemPerEd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="1"
+        app:layout_constraintStart_toEndOf="@+id/alloMemPerTv"
+        app:layout_constraintTop_toBottomOf="@+id/maxMemTv"
+        android:paddingStart="10dp"
+        android:paddingTop="10dp"/>
+
+
+    <TextView
+        android:id="@+id/intervalTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="请设置内存分配间隔时间(ms)："
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/alloMemPerTv"
+        android:paddingStart="10dp"
+        android:paddingTop="10dp"/>
+
+    <EditText
+        android:id="@+id/intervalED"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="200"
+        app:layout_constraintStart_toEndOf="@+id/intervalTv"
+        app:layout_constraintTop_toBottomOf="@+id/alloMemPerTv"
+        android:paddingStart="10dp"
+        android:paddingTop="10dp"/>
+
+    <TextView
+        android:id="@+id/totalAllocMemTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="已分配内存总数（MB）："
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/intervalTv"
+        android:paddingStart="10dp"
+        android:paddingTop="30dp"/>
+    <TextView
+        android:id="@+id/totalAllocMem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="1"
+        app:layout_constraintStart_toEndOf="@+id/totalAllocMemTv"
+        app:layout_constraintTop_toBottomOf="@+id/intervalTv"
+        android:paddingStart="10dp"
+        android:paddingTop="30dp"/>
+
+    <Button
+        android:id="@+id/startBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="开始运行"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
