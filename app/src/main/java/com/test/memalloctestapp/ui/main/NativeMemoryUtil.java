@@ -8,4 +8,8 @@ public class NativeMemoryUtil {
     }
 
     public static native ByteBuffer allocateNativeMemory(long size);
+
+    public static native void createFileIfNotExist(String filename);
+
+    public static native void mmapFileMemoryTest(String strPath_externalSD);
 }

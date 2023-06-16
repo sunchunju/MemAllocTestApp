@@ -137,6 +137,11 @@ public class MainFragment extends Fragment implements View.OnClickListener {
         allocMemTotal = 0;
         allocMemForeground = 0;
         allocMemBackground = 0;
+
+        String strPath_ExternalSD = Environment.getExternalStorageDirectory().getPath() + "/";
+        strPath_ExternalSD += "MemoryAllocateTest.bin";
+        NativeMemoryUtil.createFileIfNotExist(strPath_ExternalSD);
+        NativeMemoryUtil.mmapFileMemoryTest(strPath_ExternalSD);
     }
 
     private void initObserver() {
